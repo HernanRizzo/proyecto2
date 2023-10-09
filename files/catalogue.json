@@ -1,0 +1,66 @@
+[
+    {
+        "code": "01",
+        "name": "Demaquillante",
+        "brief": "Tu piel necesita estar libre de impurezas. Demaquillante bifaz. Presentación, loción en franco plástico de 120 ml.",
+        "image": "./img/11demaquillante.png",
+        "info": "Su sistema bifásico elimina el make-up proporcionando una sensación sana y flaxible a la superficie de la piel, dejando una película emoliente sobre la misma.",
+        "price": 1234
+    },
+    {
+        "code": "02",
+        "name": "Gel tónico",
+        "brief": "Tu piel necesita mantener su tersura natural. Gel tónico con Aloe Vera, Manzanilla y Agua de Rosas. Presentación, pote de 50 gr.",
+        "image": "./img/21tonico.png",
+        "info": "El aloe vera tiene propiedades bacteriostáticas, es decir, mantiene en equilibrio las bacterias, es humectante e hidratante. Al igual que la manzanilla protege la piel de agentes irritantes, además tiene unefecto calmante y descongestivo. Junto al Agua de Rosas, estos dos activos vigorizan el rostro después de una buena exfoliación, devolviendo su tersura natural.",
+        "price": 2345
+    },
+    {
+        "code": "03",
+        "name": "Crema evanescente",
+        "brief": "Tu piel necesita humectarse. Crema evanescente a base de Aloe Vera, Manzanilla y Lanolina. Presetación, frasco de 200 gr.",
+        "image": "./img/31evanescente.png",
+        "info": "Contiene Aloe Vera, Manzanilla y Lanolina. La combinación de estos elementos proporciona una capa oclusiva en la superficie de la piel disminuyendo la velocidad de la pérdida de agua.",
+        "price": 3456
+    },
+    {
+        "code": "04",
+        "name": "Crema evanescente",
+        "brief": "Tu piel necesita mantener su tersura. Crema evanescente nocturna a base de Agua de Rosas, Aloe Vera, Caléndula, Colágeno y Elastina. Presentación, frasco de 30 gr.",
+        "image": "./img/41evanescente.png",
+        "info": "Es una night cream que cuenta con Agua de Rosas y Aloe Vera. Su acción nocturna transforma la piel en seday satén. La Caléndula tiene virtudes antiespasmódicas. El Colágeno y la Elastina, componentes fibrosos naturales de la dermis, devuelven la elasticidad y resistencia a la tensión que va disminuyendo con el paso del tiempo.",
+        "price": 4567
+    },
+    {
+        "code": "05",
+        "name": "Pack limpieza",
+        "brief": "Botella plástica de 120 ml con jabón líquido y 120 gr de sales de baño en un frasco de vidrio presentados en una bolsa plástica transparente.",
+        "image": "./img/51jabon-y-sales-1.png",
+        "info": "Para limpieza y relajación después de la labor diaria. Pack de limpieza y relajación compuesto por jabón líquido y sales de baño. Presentación, una bolsa conteniendo ambos envases. Cuatro fragancias para elegir: Water, Flowers, Sweet y Free.",
+        "price": 5678
+    },
+    {
+        "code": "06",
+        "name": "Pack relajación",
+        "brief": "Frasco plástico de 200 gr con crema evanescente a base de Aloe Vera, Manzanilla y Lanolina y 120 gr Gel tónico con Aloe Vera, Manzanilla y Agua de Rosas presentados en una caja plástica transparente.",
+        "image": "./img/61crema-y-sales.png",
+        "info": "Para relajarse después de la labor diaria y luego mantener tu piel humectada. Pack de relajación y humectación compuesto por sales de baño y crema evanescente a base de Aloe Vera, Manzanilla y Lanolina. Presentación, una bolsa conteniendo ambos envases. Cuatro fragancias de sales de baño para elgir: Water, Flowers, Sweet y Free.",
+        "price": 6789
+    },
+    {
+        "code": "07",
+        "name": "Pack regeneración",
+        "brief": "Frasco de vidrio de 30 gr con crema evanescente junto a un pote plástico de 50 gr de gel tónico, presentados en una caja plástica transparente.",
+        "image": "./img/71crema-y-tonico.png",
+        "info": "Pack de regeneración nocturna compuesto por un frasco plástico de 200 gr con crema evanescente a base de Aloe Vera, Manzanilla y Lanolina y 120 gr Gel tónico con Aloe Vera, Manzanilla y Agua de Rosas presentados en una caja plástica transparente. Cuatro fragancias para elegir: Water, Flowers, Sweet y Free.",
+        "price": 7890
+    },
+    {
+        "code": "08",
+        "name": "Perfume",
+        "brief": "Para mimarte vos o para regalar. Perfume en frasco de vidrio de 120 ml con pulverizador",
+        "image": "./img/81perfume.png",
+        "info": "Perfume presentado en frasco de vidrio con polverizador que contien 120 ml de producto, con bolsa de cartulina y envoltorio de papel creppe y tarjeta de felicitación personalizada. Ideal para realizar una obsequio. Opcional etiqueta personalizada. Cuatro fragancias para elegir: Water, Flowers, Sweet y Free.",
+        "price": 8901
+    }
+]

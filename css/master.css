@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:	"isologo    star		banner"
+							"nav		wrapper		aside";
+    width: 100vw;
+    height: 100vh;
+    background-image: url(..//img/00fondo.png);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color-dodge;
+    padding-left: 5.35vw;
+}
+
+.isologo,
+.star,
+.banner,
+.nav,
+.aside,
+.explain {
+	display: flex;
+    align-items: center;
+    position: relative;
+    width: 32rem;
+    margin-left: 1.87vw;
+}
+
+.isologo,
+.star,
+.banner {
+    min-height: 3vh;
+}
+
+.nav,
+.aside,
+.explain {
+    height: 85vh;
+}
+
+.isologo {
+    grid-area: isologo;
+}
+
+.iso {
+    transform: scale(1.75);
+    padding-top: 3.5rem;
+    padding-left: 1.5rem;
+}
+
+.logo {
+    transform: scale(1.75);
+    padding-top: 6rem;
+    padding-left: 5.5rem;
+}
+
+.star {
+    justify-content: center;
+    grid-area: star;
+    padding-top: 5rem;
+    padding-left: 1.6rem;
+}
+
+.banner {
+    justify-content: center;
+    grid-area: banner;
+    padding-top: 7rem;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.aside {
+	grid-area: aside;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 32rem;
+    height: 95vh;
+    overflow: hidden;
+    grid-area: wrapper;
+    margin-top: -4.75rem;
+    margin-left: 1.97vw;
+}
+
+.navWrapper,
+.asideWrapper,
+.infoWrapper {
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2.75rem;
+}
+
+.cardWrapper {
+    display: flex;
+    flex: row;
+    flex-wrap: nowrap;
+    width: calc(100% * 8);
+    margin-left: -100%;
+}
+
+.navBar,
+.asideBar,
+.card {
+    width: 32rem;
+    height: 32rem;
+    perspective: 1250px;
+}
+
+.cardCover,
+.cardDetail,
+.cardBack,
+.infoCover,
+.infoDetail,
+.infoBack {
+    border-radius: 15px;
+}
+
+.cardCover,
+.cardDetail,
+.cardBack {
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.cardCover,
+.cardDetail,
+.infoCover,
+.infoDetail {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 28rem;
+    height: 28rem;
+    background-color: transparent;
+}
+
+.cardCover,
+.infoCover {
+    transform-origin: top;
+    z-index: 3;
+}
+
+.cardDetail,
+.infoDetail {
+    transform-origin: bottom;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.navDetail,
+.asideDetail,
+.infoDetail {
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.navDetail {
+    top: 2rem;
+    left: 2rem;
+}
+
+.asideDetail {
+    top: -1.5rem;
+    left: 2rem;
+}
+
+.navBack,
+.asideBack,
+.cardBack,
+.infoBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.navBack,
+.asideBack {
+    border-radius: 15px;
+}
+
+.opened1 {
+    transform: translateY(-50%);
+}
+
+.opened2 {
+    transform: translateY(50%);
+}
+
+.opened3 {
+    height: 190%;
+    transform: translateY(-24%);
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+h1 {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 7px 7px 4.5px rgba(0,0,0);
+    text-align: left;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 3.25rem;
+}
+
+h2 {
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 7px 7px 4.5px rgba(0,0,0);
+    text-align: right;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -1.25rem;
+    padding-right: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    padding-top: 2rem;
+}
+
+.navLinkFocus {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.35);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.navLink,
+.btnLink,
+.btnAdd,
+.btnDel,
+.btnRtn {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.navLink {
+    display: block;
+    font-size: 2rem;
+}
+
+.btnLink,
+.btnAdd,
+.btnDel,
+.btnRtn {
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.btnLink,
+.btnAdd {
+    right: 1rem;
+}
+
+.btnDel {
+    right: 9rem;
+}
+
+.btnRtn {
+    right: 20rem;
+}
+
+.navLink:hover,
+.btnLink:hover,
+.btnAdd:hover,
+.btnDel:hover,
+.btnRtn:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.btnLeft,
+.btnRight {
+    display: flex;
+    position: absolute;
+    top: auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.btnLeft:hover,
+.btnRight:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.btnLeft {
+    left: 0.15rem;
+    padding: 0.32rem;
+}
+
+.btnRight {
+    right: 0.10rem;
+    padding: 0.35rem;
+}
+
+.social,
+.feedback {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.address {
+    display: block;
+}
+
+.visit {
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    padding-left: 1.5rem;
+}
+
+.visitLink {
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+}
+
+.icons {
+    width: calc(2rem + 2vw);
+    height: calc(2rem + 2vw);
+    object-fit: fill;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding-top: 0.75rem;
+    padding-left: 0.75rem;
+    cursor: pointer;
+}
+
+.visitLink:hover,
+.icons:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.code {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 7px 7px 4.5px rgba(0,0,0);
+    text-align: right;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: -3rem;
+    padding-right: 3.25rem;
+}
+
+.brief {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 11rem;
+    padding-right: 3.25rem;
+}
+
+.price {
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 7px 7px 4.5px rgba(0,0,0);
+    text-align: right;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 7rem;
+    padding-right: 3.25rem;
+}
+
+.speech {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 768px){
+	.body {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, auto);
+		grid-template-areas:	"isologo"
+                                "star"
+                                "banner"
+								"nav"
+						 		"wrapper"
+								"aside";
+	}
+}
